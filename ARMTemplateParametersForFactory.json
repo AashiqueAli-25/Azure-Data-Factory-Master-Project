@@ -1,0 +1,234 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "value": "adfprojectdevali"
+        },
+        "LS_SQL_CSV_password": {
+            "value": ""
+        },
+        "DS_SQL_PARQUET_SINK_accountKey": {
+            "value": ""
+        },
+        "LS_SQL_PARQUET_SINK_accountKey": {
+            "value": ""
+        },
+        "LS_SFTP_CSV_accountKey": {
+            "value": ""
+        },
+        "LS_CSV_PRQT_SINK_accountKey": {
+            "value": ""
+        },
+        "LS_SFTP_CSV_SINK_accountKey": {
+            "value": ""
+        },
+        "LS_EXCEL_PRQT_accountKey": {
+            "value": ""
+        },
+        "LS_EXCEL_PRQT_SINK_accountKey": {
+            "value": ""
+        },
+        "LS_CSV_PRQT_accountKey": {
+            "value": ""
+        },
+        "LS_CSV_PRQTT_accountKey": {
+            "value": ""
+        },
+        "LS_CSV_PRQT_SINKS_accountKey": {
+            "value": ""
+        },
+        "LS_SNOW_BLOB_password": {
+            "value": ""
+        },
+        "LS_RESTAPI_PRQT_SINK_accountKey": {
+            "value": ""
+        },
+        "LS_JSON_PRQT_accountKey": {
+            "value": ""
+        },
+        "LS_JSON_PRQT_SINK_accountKey": {
+            "value": ""
+        },
+        "LS_BULK_CSV_accountKey": {
+            "value": ""
+        },
+        "LS_BULK_CSV_SINK_accountKey": {
+            "value": ""
+        },
+        "LS_AZRSQL_DB_password": {
+            "value": ""
+        },
+        "LS_SQL_DB_password": {
+            "value": ""
+        },
+        "LS_AZRSQL_DB2_password": {
+            "value": ""
+        },
+        "LS_AZRSQLDB_CSV_password": {
+            "value": ""
+        },
+        "LS_SWTICH_SQLDB_password": {
+            "value": ""
+        },
+        "LSPL3_AZRSQL_CSV_password": {
+            "value": ""
+        },
+        "LS_AZRSQLFINAL_EXCELCSV_password": {
+            "value": ""
+        },
+        "LS_AZRSQLEXCEL_METADATA_password": {
+            "value": ""
+        },
+        "LS_SNOWBLOB_connectionString": {
+            "value": ""
+        },
+        "LS_SNOWBLOBS_connectionString": {
+            "value": ""
+        },
+        "LS_SNOWBLOB_SINK_accountKey": {
+            "value": ""
+        },
+        "Tr_sample_csv_properties_PL1_MASTER_parameters_Trigger": {
+            "value": "Tr_sample_csv"
+        },
+        "LS_SQL_CSV_properties_typeProperties_server": {
+            "value": "LAPTOP-L5AAUBAI\\SQLDEV2022"
+        },
+        "LS_SQL_CSV_properties_typeProperties_database": {
+            "value": "ADEPROJECT"
+        },
+        "LS_SQL_CSV_properties_typeProperties_userName": {
+            "value": "sa"
+        },
+        "DS_SQL_PARQUET_SINK_properties_typeProperties_url": {
+            "value": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_SQL_PARQUET_SINK_properties_typeProperties_url": {
+            "value": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_SFTP_CSV_properties_typeProperties_url": {
+            "value": "https://adlsrawstorage01.dfs.core.windows.net/"
+        },
+        "LS_CSV_PRQT_SINK_properties_typeProperties_url": {
+            "value": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_SFTP_CSV_SINK_properties_typeProperties_url": {
+            "value": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_EXCEL_PRQT_properties_typeProperties_url": {
+            "value": "https://adlsrawstorage01.dfs.core.windows.net/"
+        },
+        "LS_EXCEL_PRQT_SINK_properties_typeProperties_url": {
+            "value": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_CSV_PRQT_properties_typeProperties_url": {
+            "value": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_CSV_PRQTT_properties_typeProperties_url": {
+            "value": "https://adlsrawstorage01.dfs.core.windows.net/"
+        },
+        "LS_CSV_PRQT_SINKS_properties_typeProperties_url": {
+            "value": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_SNOW_BLOB_properties_typeProperties_database": {
+            "value": "DBAZURESNOW"
+        },
+        "LS_SNOW_PRQT_SINK_sasUri": {
+            "value": ""
+        },
+        "LS_RESTAPI_PRQT_SINK_properties_typeProperties_url": {
+            "value": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_JSON_PRQT_properties_typeProperties_url": {
+            "value": "https://adlsrawstorage01.dfs.core.windows.net/"
+        },
+        "LS_JSON_PRQT_SINK_properties_typeProperties_url": {
+            "value": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_RESTAPI_PRQT_properties_typeProperties_url": {
+            "value": "https://retoolapi.dev/QPRIxK/data"
+        },
+        "LS_BULK_CSV_properties_typeProperties_url": {
+            "value": "https://adlsrawstorage01.dfs.core.windows.net/"
+        },
+        "LS_BULK_CSV_SINK_properties_typeProperties_url": {
+            "value": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_AZRSQL_DB_properties_typeProperties_server": {
+            "value": "sqlaccess1.database.windows.net"
+        },
+        "LS_AZRSQL_DB_properties_typeProperties_database": {
+            "value": "ADEPROJECT"
+        },
+        "LS_AZRSQL_DB_properties_typeProperties_userName": {
+            "value": "access"
+        },
+        "LS_SQL_DB_properties_typeProperties_server": {
+            "value": "sqlaccess1.database.windows.net"
+        },
+        "LS_SQL_DB_properties_typeProperties_database": {
+            "value": "ADEPROJECT"
+        },
+        "LS_SQL_DB_properties_typeProperties_userName": {
+            "value": "access"
+        },
+        "LS_AZRSQL_DB2_properties_typeProperties_server": {
+            "value": "sqlaccess1.database.windows.net"
+        },
+        "LS_AZRSQL_DB2_properties_typeProperties_database": {
+            "value": "ADEPROJECT"
+        },
+        "LS_AZRSQL_DB2_properties_typeProperties_userName": {
+            "value": "access"
+        },
+        "LS_AZRSQLDB_CSV_properties_typeProperties_server": {
+            "value": "sqlaccess1.database.windows.net"
+        },
+        "LS_AZRSQLDB_CSV_properties_typeProperties_database": {
+            "value": "ADEPROJECT"
+        },
+        "LS_AZRSQLDB_CSV_properties_typeProperties_userName": {
+            "value": "access"
+        },
+        "LS_SWTICH_SQLDB_properties_typeProperties_server": {
+            "value": "sqlaccess1.database.windows.net"
+        },
+        "LS_SWTICH_SQLDB_properties_typeProperties_database": {
+            "value": "ADEPROJECT"
+        },
+        "LS_SWTICH_SQLDB_properties_typeProperties_userName": {
+            "value": "access"
+        },
+        "LSPL3_AZRSQL_CSV_properties_typeProperties_server": {
+            "value": "sqlaccess1.database.windows.net"
+        },
+        "LSPL3_AZRSQL_CSV_properties_typeProperties_database": {
+            "value": "ADEPROJECT"
+        },
+        "LSPL3_AZRSQL_CSV_properties_typeProperties_userName": {
+            "value": "access"
+        },
+        "LS_AZRSQLFINAL_EXCELCSV_properties_typeProperties_server": {
+            "value": "sqlaccess1.database.windows.net"
+        },
+        "LS_AZRSQLFINAL_EXCELCSV_properties_typeProperties_database": {
+            "value": "ADEPROJECT"
+        },
+        "LS_AZRSQLFINAL_EXCELCSV_properties_typeProperties_userName": {
+            "value": "access"
+        },
+        "LS_AZRSQLEXCEL_METADATA_properties_typeProperties_server": {
+            "value": "sqlaccess1.database.windows.net"
+        },
+        "LS_AZRSQLEXCEL_METADATA_properties_typeProperties_database": {
+            "value": "ADEPROJECT"
+        },
+        "LS_AZRSQLEXCEL_METADATA_properties_typeProperties_userName": {
+            "value": "access"
+        },
+        "LS_SNOWBLOB_SINK_properties_typeProperties_url": {
+            "value": "https://adlsstoragesrc.dfs.core.windows.net/"
+        }
+    }
+}

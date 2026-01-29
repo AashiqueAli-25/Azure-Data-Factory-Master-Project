@@ -1,0 +1,519 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "type": "string",
+            "metadata": "Data Factory name",
+            "defaultValue": "adfprojectdevali"
+        },
+        "DS_SQL_PARQUET_SINK_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'DS_SQL_PARQUET_SINK'"
+        },
+        "LS_SFTP_CSV_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'LS_SFTP_CSV'"
+        },
+        "LS_CSV_PRQT_SINK_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'LS_CSV_PRQT_SINK'"
+        },
+        "LS_SFTP_CSV_SINK_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'LS_SFTP_CSV_SINK'"
+        },
+        "LS_EXCEL_PRQT_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'LS_EXCEL_PRQT'"
+        },
+        "LS_EXCEL_PRQT_SINK_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'LS_EXCEL_PRQT_SINK'"
+        },
+        "LS_CSV_PRQT_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'LS_CSV_PRQT'"
+        },
+        "LS_CSV_PRQTT_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'LS_CSV_PRQTT'"
+        },
+        "LS_CSV_PRQT_SINKS_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'LS_CSV_PRQT_SINKS'"
+        },
+        "LS_SNOW_BLOB_password": {
+            "type": "secureString",
+            "metadata": "Secure string for 'password' of 'LS_SNOW_BLOB'"
+        },
+        "LS_RESTAPI_PRQT_SINK_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'LS_RESTAPI_PRQT_SINK'"
+        },
+        "LS_JSON_PRQT_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'LS_JSON_PRQT'"
+        },
+        "LS_JSON_PRQT_SINK_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'LS_JSON_PRQT_SINK'"
+        },
+        "LS_BULK_CSV_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'LS_BULK_CSV'"
+        },
+        "LS_BULK_CSV_SINK_accountKey": {
+            "type": "secureString",
+            "metadata": "Secure string for 'accountKey' of 'LS_BULK_CSV_SINK'"
+        },
+        "LS_AZRSQL_DB_password": {
+            "type": "secureString",
+            "metadata": "Secure string for 'password' of 'LS_AZRSQL_DB'"
+        },
+        "LS_SQL_DB_password": {
+            "type": "secureString",
+            "metadata": "Secure string for 'password' of 'LS_SQL_DB'"
+        },
+        "DS_SQL_PARQUET_SINK_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_SFTP_CSV_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsrawstorage01.dfs.core.windows.net/"
+        },
+        "LS_CSV_PRQT_SINK_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_SFTP_CSV_SINK_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_EXCEL_PRQT_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsrawstorage01.dfs.core.windows.net/"
+        },
+        "LS_EXCEL_PRQT_SINK_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_CSV_PRQT_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_CSV_PRQTT_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsrawstorage01.dfs.core.windows.net/"
+        },
+        "LS_CSV_PRQT_SINKS_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_SNOW_BLOB_properties_typeProperties_database": {
+            "type": "string",
+            "defaultValue": "DBAZURESNOW"
+        },
+        "LS_SNOW_PRQT_SINK_sasUri": {
+            "type": "secureString",
+            "metadata": "Secure string for 'sasUri' of 'LS_SNOW_PRQT_SINK'"
+        },
+        "LS_RESTAPI_PRQT_SINK_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_JSON_PRQT_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsrawstorage01.dfs.core.windows.net/"
+        },
+        "LS_JSON_PRQT_SINK_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_RESTAPI_PRQT_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://retoolapi.dev/QPRIxK/data"
+        },
+        "LS_BULK_CSV_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsrawstorage01.dfs.core.windows.net/"
+        },
+        "LS_BULK_CSV_SINK_properties_typeProperties_url": {
+            "type": "string",
+            "defaultValue": "https://adlsstoragesrc.dfs.core.windows.net/"
+        },
+        "LS_AZRSQL_DB_properties_typeProperties_server": {
+            "type": "string",
+            "defaultValue": "sqlaccess1.database.windows.net"
+        },
+        "LS_AZRSQL_DB_properties_typeProperties_database": {
+            "type": "string",
+            "defaultValue": "ADEPROJECT"
+        },
+        "LS_AZRSQL_DB_properties_typeProperties_userName": {
+            "type": "string",
+            "defaultValue": "access"
+        },
+        "LS_SQL_DB_properties_typeProperties_server": {
+            "type": "string",
+            "defaultValue": "sqlaccess1.database.windows.net"
+        },
+        "LS_SQL_DB_properties_typeProperties_database": {
+            "type": "string",
+            "defaultValue": "ADEPROJECT"
+        },
+        "LS_SQL_DB_properties_typeProperties_userName": {
+            "type": "string",
+            "defaultValue": "access"
+        }
+    },
+    "variables": {
+        "factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+    },
+    "resources": [
+        {
+            "name": "[concat(parameters('factoryName'), '/selfhostedintegrationRuntime')]",
+            "type": "Microsoft.DataFactory/factories/integrationRuntimes",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "type": "SelfHosted",
+                "typeProperties": {}
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/DS_SQL_PARQUET_SINK')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('DS_SQL_PARQUET_SINK_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('DS_SQL_PARQUET_SINK_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_SFTP_CSV')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_SFTP_CSV_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_SFTP_CSV_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_CSV_PRQT_SINK')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_CSV_PRQT_SINK_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_CSV_PRQT_SINK_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_SFTP_CSV_SINK')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_SFTP_CSV_SINK_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_SFTP_CSV_SINK_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_EXCEL_PRQT')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_EXCEL_PRQT_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_EXCEL_PRQT_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_EXCEL_PRQT_SINK')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_EXCEL_PRQT_SINK_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_EXCEL_PRQT_SINK_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_CSV_PRQT')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_CSV_PRQT_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_CSV_PRQT_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_CSV_PRQTT')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_CSV_PRQTT_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_CSV_PRQTT_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_CSV_PRQT_SINKS')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_CSV_PRQT_SINKS_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_CSV_PRQT_SINKS_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_SNOW_BLOB')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "SnowflakeV2",
+                "typeProperties": {
+                    "authenticationType": "Basic",
+                    "accountIdentifier": "NYMRGPU-OC19047",
+                    "user": "STUDENT01",
+                    "database": "[parameters('LS_SNOW_BLOB_properties_typeProperties_database')]",
+                    "warehouse": "COMPUTE_WH",
+                    "password": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_SNOW_BLOB_password')]"
+                    },
+                    "useUtcTimestamps": false
+                },
+                "version": "1.1"
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_SNOW_PRQT_SINK')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobStorage",
+                "typeProperties": {
+                    "sasUri": "[parameters('LS_SNOW_PRQT_SINK_sasUri')]"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_RESTAPI_PRQT_SINK')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_RESTAPI_PRQT_SINK_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_RESTAPI_PRQT_SINK_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_JSON_PRQT')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_JSON_PRQT_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_JSON_PRQT_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_JSON_PRQT_SINK')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_JSON_PRQT_SINK_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_JSON_PRQT_SINK_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_RESTAPI_PRQT')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "RestService",
+                "typeProperties": {
+                    "url": "[parameters('LS_RESTAPI_PRQT_properties_typeProperties_url')]",
+                    "enableServerCertificateValidation": true,
+                    "authenticationType": "Anonymous"
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_BULK_CSV')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_BULK_CSV_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_BULK_CSV_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_BULK_CSV_SINK')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureBlobFS",
+                "typeProperties": {
+                    "url": "[parameters('LS_BULK_CSV_SINK_properties_typeProperties_url')]",
+                    "accountKey": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_BULK_CSV_SINK_accountKey')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_AZRSQL_DB')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureSqlDatabase",
+                "typeProperties": {
+                    "server": "[parameters('LS_AZRSQL_DB_properties_typeProperties_server')]",
+                    "database": "[parameters('LS_AZRSQL_DB_properties_typeProperties_database')]",
+                    "encrypt": "mandatory",
+                    "trustServerCertificate": false,
+                    "authenticationType": "SQL",
+                    "userName": "[parameters('LS_AZRSQL_DB_properties_typeProperties_userName')]",
+                    "password": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_AZRSQL_DB_password')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        },
+        {
+            "name": "[concat(parameters('factoryName'), '/LS_SQL_DB')]",
+            "type": "Microsoft.DataFactory/factories/linkedServices",
+            "apiVersion": "2018-06-01",
+            "properties": {
+                "annotations": [],
+                "type": "AzureSqlDatabase",
+                "typeProperties": {
+                    "server": "[parameters('LS_SQL_DB_properties_typeProperties_server')]",
+                    "database": "[parameters('LS_SQL_DB_properties_typeProperties_database')]",
+                    "encrypt": "mandatory",
+                    "trustServerCertificate": false,
+                    "authenticationType": "SQL",
+                    "userName": "[parameters('LS_SQL_DB_properties_typeProperties_userName')]",
+                    "password": {
+                        "type": "SecureString",
+                        "value": "[parameters('LS_SQL_DB_password')]"
+                    }
+                }
+            },
+            "dependsOn": []
+        }
+    ]
+}
