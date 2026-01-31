@@ -1,0 +1,16 @@
+{
+	"name": "DS_GIT_AZRSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AZRSQL_SALES",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CAR_SALES_TABLE"
+		}
+	}
+}
