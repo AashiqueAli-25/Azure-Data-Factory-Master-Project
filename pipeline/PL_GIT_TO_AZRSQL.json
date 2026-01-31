@@ -52,7 +52,10 @@
 				"outputs": [
 					{
 						"referenceName": "DS_GIT_AZRSQL_SINK",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Table_name": "SalesData.csv"
+						}
 					}
 				]
 			}
