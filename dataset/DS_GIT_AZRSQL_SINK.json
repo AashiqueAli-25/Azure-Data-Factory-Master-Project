@@ -57,6 +57,10 @@
 				"name": "DealerName",
 				"type": "varchar"
 			}
-		]
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CAR_SALES_TABLE"
+		}
 	}
 }
