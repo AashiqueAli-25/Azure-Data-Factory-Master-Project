@@ -8,6 +8,12 @@
 		"LS_AZRSQL_SALES_password": {
 			"value": ""
 		},
+		"LS_BRONZE_SINK_accountKey": {
+			"value": ""
+		},
+		"LS_SQL_BRONZE_password": {
+			"value": ""
+		},
 		"LS_AZRSQL_SALES_properties_typeProperties_server": {
 			"value": "sqlcarsales.database.windows.net"
 		},
@@ -17,8 +23,20 @@
 		"LS_AZRSQL_SALES_properties_typeProperties_userName": {
 			"value": "adminali"
 		},
+		"LS_BRONZE_SINK_properties_typeProperties_url": {
+			"value": "https://adlscarsales.dfs.core.windows.net/"
+		},
 		"LS_GIT_AZRSQL_properties_typeProperties_url": {
 			"value": "https://raw.githubusercontent.com"
+		},
+		"LS_SQL_BRONZE_properties_typeProperties_server": {
+			"value": "sqlcarsales.database.windows.net"
+		},
+		"LS_SQL_BRONZE_properties_typeProperties_database": {
+			"value": "sqlserver"
+		},
+		"LS_SQL_BRONZE_properties_typeProperties_userName": {
+			"value": "adminali"
 		}
 	}
 }

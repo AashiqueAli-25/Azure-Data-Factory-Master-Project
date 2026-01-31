@@ -11,6 +11,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'LS_AZRSQL_SALES'"
 		},
+		"LS_BRONZE_SINK_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_BRONZE_SINK'"
+		},
+		"LS_SQL_BRONZE_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQL_BRONZE'"
+		},
 		"LS_AZRSQL_SALES_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "sqlcarsales.database.windows.net"
@@ -23,9 +31,25 @@
 			"type": "string",
 			"defaultValue": "adminali"
 		},
+		"LS_BRONZE_SINK_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlscarsales.dfs.core.windows.net/"
+		},
 		"LS_GIT_AZRSQL_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://raw.githubusercontent.com"
+		},
+		"LS_SQL_BRONZE_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqlcarsales.database.windows.net"
+		},
+		"LS_SQL_BRONZE_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "sqlserver"
+		},
+		"LS_SQL_BRONZE_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adminali"
 		},
 		"containerUri": {
 			"type": "string",
@@ -57,6 +81,12 @@
 					"LS_AZRSQL_SALES_password": {
 						"value": "[parameters('LS_AZRSQL_SALES_password')]"
 					},
+					"LS_BRONZE_SINK_accountKey": {
+						"value": "[parameters('LS_BRONZE_SINK_accountKey')]"
+					},
+					"LS_SQL_BRONZE_password": {
+						"value": "[parameters('LS_SQL_BRONZE_password')]"
+					},
 					"LS_AZRSQL_SALES_properties_typeProperties_server": {
 						"value": "[parameters('LS_AZRSQL_SALES_properties_typeProperties_server')]"
 					},
@@ -66,8 +96,20 @@
 					"LS_AZRSQL_SALES_properties_typeProperties_userName": {
 						"value": "[parameters('LS_AZRSQL_SALES_properties_typeProperties_userName')]"
 					},
+					"LS_BRONZE_SINK_properties_typeProperties_url": {
+						"value": "[parameters('LS_BRONZE_SINK_properties_typeProperties_url')]"
+					},
 					"LS_GIT_AZRSQL_properties_typeProperties_url": {
 						"value": "[parameters('LS_GIT_AZRSQL_properties_typeProperties_url')]"
+					},
+					"LS_SQL_BRONZE_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQL_BRONZE_properties_typeProperties_server')]"
+					},
+					"LS_SQL_BRONZE_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQL_BRONZE_properties_typeProperties_database')]"
+					},
+					"LS_SQL_BRONZE_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQL_BRONZE_properties_typeProperties_userName')]"
 					}
 				}
 			},
