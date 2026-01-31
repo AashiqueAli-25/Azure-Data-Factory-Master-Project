@@ -1,0 +1,20 @@
+{
+	"name": "DS_BRONZE_SINK",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BRONZE_SINK",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "rawdata",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
