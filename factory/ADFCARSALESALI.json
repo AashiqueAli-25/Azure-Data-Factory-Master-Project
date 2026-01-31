@@ -1,0 +1,9 @@
+{
+	"name": "ADFCARSALESALI",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6cc63eb5-122c-48ea-9932-6d7e780c9801",
+		"tenantId": "880f00fe-26af-4878-99d6-fee767a7bab2"
+	}
+}
