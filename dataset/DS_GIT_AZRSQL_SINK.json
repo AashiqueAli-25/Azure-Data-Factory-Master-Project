@@ -57,10 +57,6 @@
 				"name": "DealerName",
 				"type": "varchar"
 			}
-		],
-		"typeProperties": {
-			"schema": "dbo",
-			"table": "source_car_table"
-		}
+		]
 	}
 }
